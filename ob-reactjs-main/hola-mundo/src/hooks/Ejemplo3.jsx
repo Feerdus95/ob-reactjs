@@ -56,8 +56,8 @@ export default function MiComponenteConContexto() {
     function actualizarSesion(){
         setSessionData(
                 {
-                token: 'JWT0303456',
-                session: sessionData.session + 1
+                token: Math.random().toString(36).slice(2, 7),  // Devuelve un string alfanumérico aleatorio
+                session: sessionData.session + 1                // de 5 caracteres.
             }
         );
     }
